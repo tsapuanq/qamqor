@@ -82,6 +82,7 @@ document.querySelectorAll("[data-scroll-target]").forEach((button) => {
 
 const calculatorForm = document.querySelector("#calculatorForm");
 const leadForm = document.querySelector("#leadForm");
+const faqItems = document.querySelectorAll(".faq-list details");
 
 if (calculatorForm) {
   updateCalculatorResult(calculatorForm);
@@ -114,6 +115,20 @@ if (leadForm) {
     window.location.href = buildWhatsappUrl(message);
   });
 }
+
+faqItems.forEach((item) => {
+  item.addEventListener("toggle", () => {
+    if (!item.open) {
+      return;
+    }
+
+    faqItems.forEach((otherItem) => {
+      if (otherItem !== item) {
+        otherItem.open = false;
+      }
+    });
+  });
+});
 
 // Formspree / Google Forms placeholder:
 // If a hosted form endpoint is added later, replace the WhatsApp redirect above
