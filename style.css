@@ -72,14 +72,11 @@ textarea {
   font-weight: 800;
 }
 
-.brand-mark {
-  display: grid;
+.brand-logo {
   width: 34px;
   height: 34px;
-  color: var(--white);
-  background: var(--dark);
   border-radius: 8px;
-  place-items: center;
+  object-fit: cover;
 }
 
 .nav {
@@ -286,6 +283,25 @@ details {
   font-weight: 800;
 }
 
+.service-card {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+
+.service-icon {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  color: var(--accent-dark);
+  background: #edf7f1;
+  border: 1px solid #d4eddf;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 900;
+  place-items: center;
+}
+
 .package {
   display: flex;
   flex-direction: column;
@@ -310,6 +326,39 @@ ul {
 
 .package ul {
   flex: 1;
+}
+
+.camera-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.camera-card {
+  display: grid;
+  min-height: 190px;
+  align-content: space-between;
+  gap: 18px;
+  padding: 20px;
+  color: #2f343b;
+  background:
+    radial-gradient(circle at 86% 16%, rgba(63, 63, 61, 0.2) 0 4px, transparent 5px) 0 0 / 20px 20px,
+    linear-gradient(135deg, #ffffff 0%, #f2f3f5 100%);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.camera-card strong {
+  color: #303030;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 900;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.camera-card span {
+  color: var(--muted);
+  font-weight: 700;
 }
 
 .calculator-layout {
@@ -457,8 +506,26 @@ legend {
 
 .review {
   margin: 0;
-  font-size: 18px;
+  display: grid;
+  gap: 10px;
+  font-size: 17px;
   font-weight: 700;
+}
+
+.review p {
+  margin-bottom: 0;
+  color: var(--text);
+}
+
+.review cite {
+  color: var(--muted);
+  font-size: 14px;
+  font-style: normal;
+}
+
+.stars {
+  color: #f5a400;
+  letter-spacing: 0;
 }
 
 .note {
@@ -570,7 +637,8 @@ textarea {
 
   .grid-3,
   .grid-4,
-  .steps {
+  .steps,
+  .camera-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -620,7 +688,8 @@ textarea {
   .grid-4,
   .calculator,
   .steps,
-  .check-list {
+  .check-list,
+  .camera-strip {
     grid-template-columns: 1fr;
   }
 

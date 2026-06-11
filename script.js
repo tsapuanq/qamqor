@@ -1,4 +1,4 @@
-const WHATSAPP_PHONE = "77000000000";
+const WHATSAPP_PHONE = "77071010882";
 
 const pricesByCameraCount = {
   4: 180000,
@@ -40,7 +40,7 @@ function calculateEstimate(data) {
 
 function buildCalculatorMessage(data, estimate) {
   return [
-    "Здравствуйте! Хочу расчет видеонаблюдения в Кокшетау.",
+    "Здравствуйте! Пишу с сайта QS Kokshetau. Хочу расчет видеонаблюдения в Кокшетау.",
     `Тип объекта: ${data.objectType}`,
     `Количество камер: ${data.cameraCount}`,
     `Архив записи: ${data.archiveDays} дней`,
@@ -63,7 +63,7 @@ function updateCalculatorResult(form) {
 }
 
 document.querySelectorAll(".js-whatsapp").forEach((link) => {
-  const message = link.dataset.message || "Здравствуйте! Хочу установить камеры видеонаблюдения в Кокшетау.";
+  const message = link.dataset.message || "Здравствуйте! Пишу с сайта QS Kokshetau. Хочу установить камеры видеонаблюдения в Кокшетау.";
   link.href = buildWhatsappUrl(message);
 
   link.addEventListener("click", () => {
@@ -103,7 +103,7 @@ if (leadForm) {
 
     const data = new FormData(leadForm);
     const message = [
-      "Здравствуйте! Хочу оставить заявку на установку камер видеонаблюдения в Кокшетау.",
+      "Здравствуйте! Пишу с сайта QS Kokshetau. Хочу оставить заявку на установку камер видеонаблюдения в Кокшетау.",
       `Имя: ${data.get("name") || "не указано"}`,
       `Телефон: ${data.get("phone")}`,
       `Объект: ${data.get("object")}`,
