@@ -665,12 +665,38 @@ details:hover {
   transform: translateY(-2px);
 }
 
-.trust-card {
+.local-facts {
   display: grid;
-  gap: 8px;
-  min-height: 132px;
-  align-content: start;
-  font-weight: 850;
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+  gap: 1px;
+  overflow: hidden;
+  background: #d9e0ea;
+  border: 1px solid rgba(148, 163, 184, 0.26);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.local-facts p {
+  min-height: 118px;
+  margin: 0;
+  padding: 22px;
+  color: #374151;
+  background: #ffffff;
+  font-weight: 720;
+}
+
+.local-facts p:nth-child(1) {
+  min-height: 170px;
+  font-size: 18px;
+}
+
+.local-facts p:nth-child(2),
+.local-facts p:nth-child(3) {
+  background: #f8fafc;
+}
+
+.local-facts strong {
+  color: var(--text);
 }
 
 .local-proof {
@@ -678,22 +704,77 @@ details:hover {
   background: #ffffff;
 }
 
-.local-grid {
+.store-visit {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+  grid-template-columns: minmax(320px, 0.95fr) minmax(260px, 0.65fr) minmax(320px, 0.9fr);
   gap: 18px;
   align-items: stretch;
 }
 
-.local-card {
-  display: grid;
-  gap: 12px;
-  align-content: start;
+.store-photo,
+.equipment-photos figure,
+.case-photo {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  background: #111827;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
 }
 
-.local-card .button {
-  width: fit-content;
-  margin-top: 8px;
+.store-photo img,
+.equipment-photos img,
+.case-photo img,
+.audience-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.store-photo {
+  min-height: 390px;
+}
+
+.store-photo figcaption,
+.equipment-photos figcaption,
+.case-photo figcaption {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  max-width: calc(100% - 24px);
+  padding: 8px 10px;
+  color: #ffffff;
+  background: rgba(15, 23, 42, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.store-notes {
+  display: grid;
+  gap: 18px;
+}
+
+.store-note {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.store-note:nth-child(2) {
+  transform: translateY(28px);
+}
+
+.store-note p {
+  color: var(--muted);
+  font-weight: 720;
 }
 
 .local-label {
@@ -713,6 +794,15 @@ details:hover {
   border: 1px solid rgba(148, 163, 184, 0.24);
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
+}
+
+.store-visit .twogis-card {
+  grid-template-columns: 1fr;
+}
+
+.twogis-card .button {
+  width: fit-content;
+  margin-top: 10px;
 }
 
 .twogis-card strong {
@@ -761,7 +851,6 @@ details:hover {
   font-weight: 800;
 }
 
-.trust-card span,
 .package-kicker {
   color: var(--blue);
   font-size: 12px;
@@ -769,8 +858,7 @@ details:hover {
   text-transform: uppercase;
 }
 
-.service-card,
-.audience-card {
+.service-card {
   display: grid;
   align-content: start;
   gap: 12px;
@@ -814,8 +902,7 @@ details:hover {
   gap: 18px;
 }
 
-.service-icon,
-.audience-icon {
+.service-icon {
   display: inline-grid;
   width: 46px;
   height: 46px;
@@ -830,12 +917,48 @@ details:hover {
   place-items: center;
 }
 
-.audience-icon {
-  color: #f8fafc;
-  background:
-    radial-gradient(circle at 30% 20%, rgba(34, 197, 94, 0.3), transparent 42%),
-    linear-gradient(145deg, #111827, #334155);
-  border-color: rgba(148, 163, 184, 0.34);
+.use-cases {
+  display: grid;
+  grid-template-columns: minmax(320px, 1.15fr) repeat(2, minmax(220px, 0.8fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.audience-card {
+  display: grid;
+  overflow: hidden;
+  align-content: start;
+  gap: 12px;
+  min-height: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.audience-card img {
+  height: 150px;
+  filter: saturate(0.9);
+}
+
+.audience-card h3,
+.audience-card p {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.audience-card p {
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-weight: 720;
+}
+
+.audience-card-large {
+  grid-row: span 2;
+}
+
+.audience-card-large img {
+  height: 290px;
 }
 
 .package {
@@ -954,6 +1077,11 @@ ul {
   display: grid;
   gap: 16px;
   align-content: start;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
 }
 
 .simple-fact h3,
@@ -985,6 +1113,7 @@ ul {
 
 .no-extra {
   border-color: rgba(34, 197, 94, 0.26);
+  transform: translateY(26px);
 }
 
 .no-extra .button {
@@ -1031,6 +1160,58 @@ ul {
   border: 1px solid #dbeafe;
   border-radius: var(--radius);
   content: "";
+}
+
+.equipment-section {
+  padding-top: 34px;
+  background: #ffffff;
+}
+
+.equipment-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(360px, 1.14fr);
+  gap: clamp(24px, 5vw, 64px);
+  align-items: center;
+}
+
+.equipment-layout > div:first-child {
+  max-width: 590px;
+}
+
+.equipment-layout p {
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 720;
+}
+
+.equipment-list {
+  margin-top: 22px;
+}
+
+.equipment-photos {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(180px, 0.72fr);
+  gap: 18px;
+  align-items: end;
+}
+
+.equipment-photos figure {
+  min-height: 360px;
+}
+
+.real-photo-slot {
+  display: grid;
+  min-height: 220px;
+  padding: 20px;
+  color: #334155;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.84), rgba(248, 250, 252, 0.92)),
+    repeating-linear-gradient(135deg, #dbe3ee, #dbe3ee 10px, #eef2f7 10px, #eef2f7 20px);
+  border: 1px dashed #94a3b8;
+  border-radius: var(--radius);
+  place-items: center;
+  text-align: center;
+  font-weight: 900;
 }
 
 .calculator-section {
@@ -1199,6 +1380,39 @@ legend {
   content: counter(steps);
 }
 
+.phone-section {
+  background: #ffffff;
+}
+
+.phone-board {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 1px;
+  overflow: hidden;
+  background: #d9e0ea;
+  border: 1px solid rgba(148, 163, 184, 0.26);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.phone-board p {
+  margin: 0;
+  padding: 22px;
+  color: #4b5563;
+  background: #ffffff;
+  font-weight: 720;
+}
+
+.phone-board p:nth-child(1) {
+  min-height: 170px;
+  background: #f8fafc;
+  font-size: 18px;
+}
+
+.phone-board strong {
+  color: var(--text);
+}
+
 .split {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
@@ -1300,6 +1514,11 @@ legend {
   font-weight: 950;
 }
 
+.case-photo {
+  min-height: 210px;
+  margin: -24px -24px 20px;
+}
+
 .case-card p {
   color: var(--muted);
   font-weight: 720;
@@ -1329,12 +1548,8 @@ legend {
   margin-top: 18px;
 }
 
-.photo-placeholder-small {
-  min-height: 150px;
-  margin: 0;
-  background:
-    linear-gradient(135deg, rgba(17, 24, 39, 0.86), rgba(55, 65, 81, 0.68)),
-    repeating-linear-gradient(90deg, #111827, #111827 16px, #1f2937 16px, #1f2937 32px);
+.photo-strip .real-photo-slot {
+  min-height: 160px;
 }
 
 .review {
@@ -1613,9 +1828,17 @@ textarea {
   .reviews-layout,
   .maintenance-card,
   .quick-card-horizontal,
-  .local-grid,
-  .twogis-card {
+  .twogis-card,
+  .store-visit,
+  .equipment-layout,
+  .equipment-photos {
     grid-template-columns: 1fr;
+  }
+
+  .use-cases,
+  .local-facts,
+  .phone-board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .hero {
@@ -1633,6 +1856,15 @@ textarea {
 
   .case-featured {
     grid-column: auto;
+  }
+
+  .audience-card-large {
+    grid-row: auto;
+  }
+
+  .store-note:nth-child(2),
+  .no-extra {
+    transform: none;
   }
 
   .result-card {
@@ -1766,7 +1998,10 @@ textarea {
   .camera-strip,
   .trust-strip,
   .service-secondary,
-  .review-cards {
+  .review-cards,
+  .use-cases,
+  .local-facts,
+  .phone-board {
     grid-template-columns: 1fr;
   }
 
@@ -1799,6 +2034,16 @@ textarea {
 
   .maintenance-card {
     padding: 22px;
+  }
+
+  .store-photo,
+  .equipment-photos figure {
+    min-height: 260px;
+  }
+
+  .audience-card img,
+  .audience-card-large img {
+    height: 210px;
   }
 
   .package-badge {
