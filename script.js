@@ -46,7 +46,8 @@ function buildCalculatorMessage(data, estimate) {
     `Архив записи: ${data.archiveDays} дней`,
     `Уличные камеры: ${data.outdoor}`,
     `Просмотр с телефона: ${data.mobileAccess}`,
-    `Ориентировочная стоимость с сайта: от ${formatter.format(estimate)} тг`,
+    `Итоговая сумма с калькулятора: от ${formatter.format(estimate)} тг`,
+    "Понимаю, что это предварительный расчет. Уточните точную стоимость по кабелю, высоте монтажа, типу камер и жесткому диску.",
   ].join("\n");
 }
 
@@ -110,7 +111,9 @@ if (leadForm) {
       `Имя: ${data.get("name") || "не указано"}`,
       `Телефон: ${data.get("phone")}`,
       `Объект: ${data.get("object")}`,
+      `Примерное количество камер: ${data.get("cameraCount")}`,
       `Комментарий: ${data.get("comment") || "без комментария"}`,
+      "Могу отправить фото объекта, чтобы быстрее понять количество камер, стоимость и что входит в монтаж.",
     ].join("\n");
 
     // GA/GTM event placeholder: lead_form_submit
