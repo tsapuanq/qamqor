@@ -24,16 +24,29 @@
         <img class="brand-logo" src="assets/qs-logo.svg" alt="QS Kokshetau">
         <span>QS Kokshetau</span>
       </a>
-      <nav class="nav" aria-label="Основная навигация">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" id="siteNav" aria-label="Основная навигация">
         <a href="#packages">Пакеты</a>
         <a href="#calculator">Калькулятор</a>
+        <a href="#cases-title">Работы</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="header-phone" href="tel:+77071010882">+7 707 101 08 82</a>
+      <div class="header-actions">
+        <a class="header-phone" href="tel:+77071010882">+7 707 101 08 82</a>
+        <a class="header-whatsapp js-whatsapp" href="#" data-message="Здравствуйте! Пишу с сайта QS Kokshetau. Хочу узнать стоимость видеонаблюдения.">WhatsApp</a>
+        <button class="header-calc" type="button" data-scroll-target="#calculator">Расчет</button>
+      </div>
     </header>
 
     <main id="top">
       <section class="hero section">
+        <span class="metal-grid" aria-hidden="true"></span>
+        <span class="spark spark-one" aria-hidden="true"></span>
+        <span class="spark spark-two" aria-hidden="true"></span>
         <div class="hero-copy">
           <div class="badges hero-badges" aria-label="Преимущества">
             <span>Кокшетау</span>
@@ -50,6 +63,7 @@
           <p class="hero-note">Консультация по телефону: <a href="tel:+77071010882">+7 707 101 08 82</a></p>
         </div>
         <aside class="hero-panel" aria-label="Быстрый расчет">
+          <div class="panel-label">Security control / монтаж под ключ</div>
           <div class="hero-media" aria-label="Монтаж камеры видеонаблюдения">
             <img src="assets/hero-cctv.jpg" alt="Мастер устанавливает камеру видеонаблюдения" loading="eager">
           </div>
