@@ -82,7 +82,7 @@ document.querySelectorAll("[data-scroll-target]").forEach((button) => {
 });
 
 const calculatorForm = document.querySelector("#calculatorForm");
-const leadForm = document.querySelector("#leadForm");
+const leadForms = document.querySelectorAll(".js-lead-form");
 const faqItems = document.querySelectorAll(".faq-list details");
 const siteHeader = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
@@ -101,25 +101,26 @@ if (calculatorForm) {
   });
 }
 
-if (leadForm) {
+leadForms.forEach((leadForm) => {
   leadForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const data = new FormData(leadForm);
+    const cameraCount = data.get("cameraCount");
     const message = [
       "Здравствуйте! Пишу с сайта QS Kokshetau. Хочу оставить заявку на установку камер видеонаблюдения в Кокшетау.",
       `Имя: ${data.get("name") || "не указано"}`,
       `Телефон: ${data.get("phone")}`,
       `Объект: ${data.get("object")}`,
-      `Примерное количество камер: ${data.get("cameraCount")}`,
+      cameraCount ? `Примерное количество камер: ${cameraCount}` : null,
       `Комментарий: ${data.get("comment") || "без комментария"}`,
       "Могу отправить фото объекта, чтобы быстрее понять количество камер, стоимость и что входит в монтаж.",
-    ].join("\n");
+    ].filter(Boolean).join("\n");
 
     // GA/GTM event placeholder: lead_form_submit
     window.location.href = buildWhatsappUrl(message);
   });
-}
+});
 
 faqItems.forEach((item) => {
   item.addEventListener("toggle", () => {

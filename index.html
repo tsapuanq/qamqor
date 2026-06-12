@@ -57,29 +57,58 @@
           </div>
           <p class="eyebrow">QS Kokshetau • проспект Абылай хана, 6</p>
           <h1>Установка камер видеонаблюдения в Кокшетау под ключ</h1>
-          <p class="hero-text">Основное направление — установка видеонаблюдения под ключ: подберем камеры, смонтируем кабель, настроим запись и просмотр с телефона. Сигнализация, домофоны, умный дом и Starlink доступны как дополнительные решения к системе безопасности.</p>
+          <p class="hero-text">Подберем камеры, установим оборудование, настроим запись и просмотр с телефона. Для дома, магазина, офиса, СТО и склада.</p>
+          <p class="hero-services">Также устанавливаем: сигнализацию, домофоны, умный дом и Starlink.</p>
           <div class="hero-actions">
             <button class="button button-primary" type="button" data-scroll-target="#calculator">Рассчитать стоимость</button>
             <a class="button button-whatsapp js-whatsapp" href="#" data-message="Здравствуйте! Пишу с сайта QS Kokshetau. Хочу установить камеры видеонаблюдения в Кокшетау. Подскажите стоимость и условия.">Написать в WhatsApp</a>
           </div>
           <p class="hero-note">Консультация по телефону: <a href="tel:+77071010882">+7 707 101 08 82</a></p>
         </div>
-        <aside class="hero-panel" aria-label="Быстрый расчет">
-          <div class="panel-label">Security control / монтаж под ключ</div>
-          <div class="hero-media" aria-label="Монтаж камеры видеонаблюдения">
-            <img src="assets/hero-cctv.jpg" alt="Мастер устанавливает камеру видеонаблюдения" loading="eager">
-          </div>
-          <div class="quick-card">
-            <span class="quick-label">Быстрый расчет</span>
+        <aside class="hero-panel hero-form-card" aria-label="Форма заявки">
+          <span class="quick-label">Заявка с сайта</span>
+          <h2>Получите точный расчет</h2>
+          <p>Оставьте контакты — уточним объект, количество камер и подскажем стоимость.</p>
+          <form class="lead-form js-lead-form" id="heroLeadForm">
+            <label>
+              Имя
+              <input type="text" name="name" placeholder="Ваше имя">
+            </label>
+            <label>
+              Телефон
+              <input type="tel" name="phone" placeholder="+7 ___ ___ __ __" required>
+            </label>
+            <label>
+              Тип объекта
+              <select name="object">
+                <option value="дом">Дом</option>
+                <option value="магазин">Магазин</option>
+                <option value="офис / СТО">Офис / СТО</option>
+                <option value="склад">Склад</option>
+              </select>
+            </label>
+            <label>
+              Комментарий
+              <textarea name="comment" rows="3" placeholder="Например: магазин, нужна касса и вход"></textarea>
+            </label>
+            <button class="button button-whatsapp" type="submit">Получить расчет</button>
+          </form>
+        </aside>
+      </section>
+
+      <section class="quick-estimate section" aria-label="Быстрый расчет">
+        <div class="quick-card quick-card-horizontal">
+          <div>
+            <span class="quick-label">Быстрый ориентир</span>
             <strong>от 180 000 тг</strong>
             <p>Базовый комплект: 4 камеры, регистратор, жесткий диск, кабель/расходники, монтаж и настройка телефона.</p>
-            <button class="button button-primary" type="button" data-scroll-target="#calculator">Открыть калькулятор</button>
           </div>
           <div class="quick-stats">
             <span><b>16</b> отзывов 2GIS</span>
             <span><b>1 день</b> типовой монтаж</span>
           </div>
-        </aside>
+          <button class="button button-primary" type="button" data-scroll-target="#calculator">Открыть калькулятор</button>
+        </div>
       </section>
 
       <section class="trust-strip" aria-label="Доверие">
@@ -181,51 +210,83 @@
             <span class="package-kicker">Для одной зоны</span>
             <h3>Мини-комплект / Wi-Fi камера</h3>
             <p class="price">от 45 000 тг</p>
-            <p class="package-note">Для квартиры, кассы, небольшой комнаты или одной зоны наблюдения.</p>
-            <ul>
-              <li>1 Wi-Fi камера</li>
-              <li>Настройка приложения</li>
-              <li>Подключение к интернету</li>
-              <li>Проверка записи</li>
-            </ul>
-            <p class="price-detail">Цена зависит от типа камеры, интернета и места установки.</p>
+            <div class="package-section">
+              <span>Для кого</span>
+              <p class="package-note">Для квартиры, кассы, небольшой комнаты или одной зоны наблюдения.</p>
+            </div>
+            <div class="package-section">
+              <span>Что входит</span>
+              <ul>
+                <li>1 Wi-Fi камера</li>
+                <li>Настройка приложения</li>
+                <li>Подключение к интернету</li>
+                <li>Проверка записи</li>
+              </ul>
+            </div>
+            <div class="package-section">
+              <span>От чего зависит цена</span>
+              <p class="price-detail">От типа камеры, интернета и места установки.</p>
+            </div>
             <a class="button button-whatsapp js-whatsapp" href="#" data-message="Здравствуйте! Хочу получить расчет мини-комплекта / Wi-Fi камеры для одной зоны.">Получить расчет в WhatsApp</a>
-          </article>
-          <article class="package">
-            <span class="package-kicker">Для частного объекта</span>
-            <h3>Дом</h3>
-            <p class="price">от 180 000 тг</p>
-            <p class="package-note">Базовый комплект для двора, ворот, гаража и входной зоны.</p>
-            <ul>
-              <li>4 камеры</li>
-              <li>Регистратор</li>
-              <li>Жесткий диск</li>
-              <li>Настройка телефона</li>
-              <li>Монтаж</li>
-            </ul>
-            <p class="price-detail">Цена зависит от кабеля, высоты монтажа, типа камер и архива.</p>
-            <a class="button button-whatsapp js-whatsapp" href="#" data-message="Здравствуйте! Хочу получить расчет пакета Дом: 4 камеры, регистратор, жесткий диск, настройка телефона и монтаж.">Получить расчет в WhatsApp</a>
           </article>
           <article class="package package-featured">
             <span class="package-badge">Популярный</span>
+            <span class="package-kicker">Для частного объекта</span>
+            <h3>Дом</h3>
+            <p class="price">от 180 000 тг</p>
+            <div class="package-section">
+              <span>Для кого</span>
+              <p class="package-note">Для двора, ворот, гаража и входной зоны.</p>
+            </div>
+            <div class="package-section">
+              <span>Что входит</span>
+              <ul>
+                <li>4 камеры</li>
+                <li>Регистратор</li>
+                <li>Жесткий диск</li>
+                <li>Настройка телефона</li>
+                <li>Монтаж</li>
+              </ul>
+            </div>
+            <div class="package-section">
+              <span>От чего зависит цена</span>
+              <p class="price-detail">От кабеля, высоты монтажа, типа камер и архива.</p>
+            </div>
+            <a class="button button-whatsapp js-whatsapp" href="#" data-message="Здравствуйте! Хочу получить расчет пакета Дом: 4 камеры, регистратор, жесткий диск, настройка телефона и монтаж.">Получить расчет в WhatsApp</a>
+          </article>
+          <article class="package">
             <span class="package-kicker">Для торговли</span>
             <h3>Магазин</h3>
             <p class="price">от 280 000 тг</p>
-            <p class="package-note">Для контроля кассы, входа, склада и торгового зала.</p>
-            <ul>
-              <li>6-8 камер</li>
-              <li>Контроль кассы, входа и склада</li>
-              <li>Архив 14-30 дней</li>
-              <li>Доступ владельцу</li>
-            </ul>
-            <p class="price-detail">Цена зависит от длины кабеля, высоты, типа камер и срока архива.</p>
+            <div class="package-section">
+              <span>Для кого</span>
+              <p class="package-note">Для контроля кассы, входа, склада и торгового зала.</p>
+            </div>
+            <div class="package-section">
+              <span>Что входит</span>
+              <ul>
+                <li>6-8 камер</li>
+                <li>Контроль кассы, входа и склада</li>
+                <li>Архив 14-30 дней</li>
+                <li>Доступ владельцу</li>
+              </ul>
+            </div>
+            <div class="package-section">
+              <span>От чего зависит цена</span>
+              <p class="price-detail">От длины кабеля, высоты, типа камер и срока архива.</p>
+            </div>
             <a class="button button-whatsapp js-whatsapp" href="#" data-message="Здравствуйте! Хочу получить расчет пакета Магазин: 6-8 камер, касса, вход, склад, архив и доступ владельцу.">Получить расчет в WhatsApp</a>
           </article>
           <article class="package">
             <span class="package-kicker">Для бизнеса</span>
             <h3>Склад / бизнес</h3>
             <p class="price">от 400 000 тг</p>
-            <p class="package-note">Для периметра, въезда, ночного контроля и больших объектов.</p>
+            <div class="package-section">
+              <span>Для кого</span>
+              <p class="package-note">Для периметра, въезда, ночного контроля и больших объектов.</p>
+            </div>
+            <div class="package-section">
+              <span>Что входит</span>
             <ul>
               <li>8+ камер</li>
               <li>Периметр</li>
@@ -233,7 +294,11 @@
               <li>Контроль въезда</li>
               <li>Индивидуальная смета</li>
             </ul>
-            <p class="price-detail">Цена зависит от трасс кабеля, высоты, уличных камер и архива записи.</p>
+            </div>
+            <div class="package-section">
+              <span>От чего зависит цена</span>
+              <p class="price-detail">От трасс кабеля, высоты, уличных камер и архива записи.</p>
+            </div>
             <a class="button button-whatsapp js-whatsapp" href="#" data-message="Здравствуйте! Хочу получить расчет пакета Склад / бизнес: 8+ камер, периметр, ночное видение и контроль въезда.">Получить расчет в WhatsApp</a>
           </article>
         </div>
@@ -244,7 +309,7 @@
         <div class="section-heading">
           <p class="eyebrow">Камеры в наличии</p>
           <h2 id="brands-title">Работаем с популярными брендами камер</h2>
-          <p>Из Instagram QS Kokshetau: Dahua, EZVIZ, Satvision и HiWatch. Подбираем модель под помещение, улицу, ночную съемку, Wi‑Fi или проводное подключение.</p>
+          <p>Подбираем не самое дорогое, а подходящее под задачу, объект и бюджет.</p>
         </div>
         <div class="camera-strip">
           <article class="camera-card">
@@ -252,12 +317,8 @@
             <span>IP и аналоговые камеры, PoE, уличные и внутренние решения.</span>
           </article>
           <article class="camera-card">
-            <strong>EZVIZ C1C-B</strong>
-            <span>Внутренняя Wi‑Fi камера с двусторонней аудиосвязью.</span>
-          </article>
-          <article class="camera-card">
-            <strong>EZVIZ C3TN</strong>
-            <span>Уличная камера, Wi‑Fi/RJ‑45, защита IP67.</span>
+            <strong>EZVIZ</strong>
+            <span>Wi-Fi камеры для квартиры, дома и небольшого офиса.</span>
           </article>
           <article class="camera-card">
             <strong>Satvision</strong>
@@ -359,18 +420,22 @@
         </ol>
       </section>
 
-      <section class="section section-muted" aria-labelledby="service-title">
-        <div class="section-heading">
-          <p class="eyebrow">Обслуживание видеонаблюдения</p>
-          <h2 id="service-title">После установки можно подключить обслуживание</h2>
-        </div>
-        <div class="service-list">
-          <span>Проверка записи</span>
-          <span>Чистка камер</span>
-          <span>Настройка доступа</span>
-          <span>Замена блока питания</span>
-          <span>Добавление новых камер</span>
-          <span>Срочный выезд</span>
+      <section class="section section-muted maintenance-section" aria-labelledby="service-title">
+        <div class="maintenance-card">
+          <div>
+            <p class="eyebrow">Обслуживание видеонаблюдения</p>
+            <h2 id="service-title">После установки можно подключить обслуживание</h2>
+            <p>Подходит для магазинов, складов, офисов и СТО, где камеры должны работать постоянно.</p>
+            <a class="button button-whatsapp js-whatsapp" href="#" data-message="Здравствуйте! Хочу узнать про обслуживание видеонаблюдения для магазина/офиса/склада/СТО.">Узнать про обслуживание</a>
+          </div>
+          <ul class="check-list maintenance-list">
+            <li><strong>Проверка записи</strong><span>Смотрим, идет ли архив и хватает ли места.</span></li>
+            <li><strong>Чистка камер</strong><span>Убираем загрязнения, которые портят изображение.</span></li>
+            <li><strong>Восстановление доступа</strong><span>Помогаем вернуть просмотр с телефона.</span></li>
+            <li><strong>Замена блока питания</strong><span>Меняем слабые или вышедшие из строя элементы.</span></li>
+            <li><strong>Добавление новых камер</strong><span>Расширяем систему под новые зоны.</span></li>
+            <li><strong>Срочный выезд</strong><span>Выезжаем, когда камеры нужны постоянно.</span></li>
+          </ul>
         </div>
       </section>
 
@@ -428,8 +493,8 @@
           <article class="review-summary">
             <span class="stars">★★★★★</span>
             <strong>16 отзывов в 2GIS</strong>
-            <p>Отзывы помогают понять, что компания работает локально, с реальным адресом и клиентами в Кокшетау.</p>
-            <a class="button button-primary" href="https://2gis.kz/kokshetau/firm/70000001103988844?m=69.38629%2C53.297529%2F16">Смотреть все отзывы</a>
+            <p>Смотрите реальные отзывы и рейтинг в профиле компании.</p>
+            <a class="button button-primary" href="https://2gis.kz/kokshetau/firm/70000001103988844?m=69.38629%2C53.297529%2F16">Открыть 2GIS</a>
           </article>
           <div class="review-cards">
             <article class="review">
@@ -443,18 +508,6 @@
               <span class="stars">★★★★★</span>
               <p>Отличная компания! Очень понравилось, что менеджер четко и понятно все объяснил. Ребята очень вежливые и оперативные.</p>
               <cite>Bahitgul Eskenova-Ramazanova</cite>
-            </article>
-            <article class="review">
-              <span class="review-source">2GIS</span>
-              <span class="stars">★★★★★</span>
-              <p>Керемет.</p>
-              <cite>Бердиболат Айланхан</cite>
-            </article>
-            <article class="review">
-              <span class="review-source">2GIS</span>
-              <span class="stars">★★★★★</span>
-              <p>Супер.</p>
-              <cite>Кайрат Байдавлетов</cite>
             </article>
           </div>
         </div>
@@ -506,16 +559,20 @@
         </div>
       </section>
 
-      <section class="section final-cta">
-        <div class="final-copy">
+      <section class="section final-cta contact-section" id="contacts">
+        <div class="contact-info">
+          <p class="eyebrow">Контакты</p>
           <h2>Хотите понять, сколько будет стоить видеонаблюдение для вашего объекта?</h2>
           <p>Если отправите фото объекта, мы быстрее подскажем количество камер, примерную стоимость и что входит в монтаж.</p>
-          <div class="hero-actions">
-            <button class="button button-primary" type="button" data-scroll-target="#calculator">Рассчитать стоимость</button>
-            <a class="button button-whatsapp js-whatsapp" href="#" data-message="Здравствуйте! Пишу с сайта QS Kokshetau. Хочу понять стоимость видеонаблюдения для моего объекта в Кокшетау.">Написать в WhatsApp</a>
+          <div class="contact-list">
+            <a href="tel:+77071010882"><span>Телефон</span>+7 707 101 08 82</a>
+            <a class="js-whatsapp" href="#" data-message="Здравствуйте! Пишу с сайта QS Kokshetau. Хочу понять стоимость видеонаблюдения для моего объекта в Кокшетау."><span>WhatsApp</span>Написать в WhatsApp</a>
+            <a href="https://www.instagram.com/qamqor_systems_kokshetau/"><span>Instagram</span>@qamqor_systems_kokshetau</a>
+            <a href="https://2gis.kz/kokshetau/firm/70000001103988844?m=69.38629%2C53.297529%2F16"><span>2GIS</span>Открыть карточку компании</a>
+            <span><span>Адрес</span>Кокшетау, проспект Абылай хана, 6</span>
           </div>
         </div>
-        <form class="lead-form" id="leadForm">
+        <form class="lead-form js-lead-form" id="leadForm">
           <h3>Оставить заявку</h3>
           <label>
             Имя

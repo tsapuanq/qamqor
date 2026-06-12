@@ -31,8 +31,8 @@ body {
   margin: 0;
   color: var(--text);
   background:
-    radial-gradient(circle at 8% 0%, rgba(37, 99, 235, 0.07), transparent 28%),
-    linear-gradient(180deg, #f8fafc 0%, #eef2f7 48%, #f8fafc 100%);
+    radial-gradient(circle at 8% 0%, rgba(37, 99, 235, 0.05), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 44%, #ffffff 100%);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
 }
@@ -193,14 +193,13 @@ textarea {
   grid-template-columns: minmax(0, 1fr) minmax(330px, 0.76fr);
   gap: clamp(28px, 5vw, 68px);
   align-items: center;
-  min-height: calc(100vh - 67px);
+  min-height: min(760px, calc(100vh - 67px));
   overflow: hidden;
   color: var(--white);
   background:
-    radial-gradient(circle at 76% 28%, rgba(245, 158, 11, 0.2), transparent 23%),
-    radial-gradient(circle at 20% 12%, rgba(37, 99, 235, 0.3), transparent 35%),
-    linear-gradient(135deg, rgba(7, 11, 19, 0.98), rgba(15, 23, 42, 0.98) 46%, rgba(32, 42, 56, 0.96)),
-    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 12px);
+    radial-gradient(circle at 78% 18%, rgba(34, 197, 94, 0.16), transparent 24%),
+    radial-gradient(circle at 18% 8%, rgba(37, 99, 235, 0.28), transparent 36%),
+    linear-gradient(135deg, rgba(8, 13, 24, 0.98), rgba(15, 23, 42, 0.96) 58%, rgba(31, 41, 55, 0.94));
 }
 
 .hero::before {
@@ -211,7 +210,8 @@ textarea {
     linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 64px 64px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent 78%);
+  opacity: 0.45;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), transparent 76%);
   content: "";
 }
 
@@ -219,9 +219,7 @@ textarea {
   position: absolute;
   inset: auto -12% -34% 26%;
   height: 420px;
-  background:
-    radial-gradient(ellipse at center, rgba(245, 158, 11, 0.2), transparent 58%),
-    linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.22), transparent);
+  background: radial-gradient(ellipse at center, rgba(34, 197, 94, 0.12), transparent 58%);
   filter: blur(12px);
   transform: rotate(-5deg);
   content: "";
@@ -233,7 +231,7 @@ textarea {
   bottom: 44px;
   width: min(440px, 42vw);
   height: 240px;
-  opacity: 0.38;
+  opacity: 0.18;
   background:
     radial-gradient(circle, rgba(226, 232, 240, 0.28) 0 2px, transparent 3px) 0 0 / 22px 22px,
     linear-gradient(135deg, rgba(148, 163, 184, 0.12), transparent);
@@ -262,7 +260,7 @@ textarea {
 .spark-two {
   right: 9%;
   bottom: 27%;
-  opacity: 0.82;
+  opacity: 0.42;
 }
 
 .trust-strip {
@@ -364,9 +362,20 @@ details p,
 
 .hero-text {
   max-width: 690px;
-  margin-bottom: 30px;
+  margin-bottom: 14px;
   color: #cbd5e1;
   font-size: clamp(18px, 2vw, 22px);
+}
+
+.hero-services {
+  display: inline-flex;
+  margin: 0 0 30px;
+  padding: 10px 13px;
+  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  font-weight: 800;
 }
 
 .hero-note {
@@ -457,34 +466,35 @@ details p,
   position: relative;
   display: grid;
   gap: 14px;
-  padding: 14px;
-  background:
-    linear-gradient(145deg, rgba(226, 232, 240, 0.12), rgba(15, 23, 42, 0.3)),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.11), transparent);
-  border: 1px solid rgba(148, 163, 184, 0.24);
+  padding: clamp(22px, 3vw, 32px);
+  color: var(--text);
+  background: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: var(--radius);
-  box-shadow:
-    0 36px 100px rgba(0, 0, 0, 0.38),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 90px rgba(2, 6, 23, 0.28);
 }
 
 .hero-panel::before {
-  position: absolute;
-  inset: 12px;
-  pointer-events: none;
-  border: 1px solid rgba(250, 204, 21, 0.24);
-  border-radius: var(--radius);
-  content: "";
+  content: none;
 }
 
-.panel-label {
-  position: relative;
-  z-index: 1;
-  color: #f8fafc;
-  font-size: 12px;
-  font-weight: 950;
-  letter-spacing: 0;
-  text-transform: uppercase;
+.hero-form-card h2 {
+  margin-bottom: 0;
+  font-size: clamp(28px, 3.2vw, 40px);
+  color: var(--text);
+}
+
+.hero-form-card p {
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.hero-form-card .lead-form {
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
 }
 
 .hero-media {
@@ -520,6 +530,29 @@ details p,
   border: 1px solid rgba(255, 255, 255, 0.42);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+}
+
+.quick-estimate {
+  padding-top: 28px;
+  padding-bottom: 28px;
+  background: var(--white);
+}
+
+.quick-card-horizontal {
+  max-width: 1180px;
+  margin: 0 auto;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.7fr) auto;
+  align-items: center;
+  gap: 22px;
+  padding: clamp(22px, 3vw, 30px);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.09);
+}
+
+.quick-card-horizontal strong {
+  display: block;
+  margin: 5px 0 8px;
+  font-size: clamp(32px, 4vw, 46px);
 }
 
 .quick-card {
@@ -721,8 +754,10 @@ details:hover {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 22px;
   overflow: hidden;
+  min-height: 100%;
+  padding: clamp(24px, 2.4vw, 32px);
 }
 
 .package::before {
@@ -735,10 +770,10 @@ details:hover {
 
 .package-featured {
   background:
-    radial-gradient(circle at 86% 0%, rgba(245, 158, 11, 0.13), transparent 34%),
+    radial-gradient(circle at 86% 0%, rgba(34, 197, 94, 0.13), transparent 34%),
     linear-gradient(180deg, #ffffff, #f8fafc);
-  border-color: rgba(245, 158, 11, 0.45);
-  box-shadow: 0 24px 58px rgba(180, 83, 9, 0.16);
+  border-color: rgba(34, 197, 94, 0.42);
+  box-shadow: 0 28px 68px rgba(22, 163, 74, 0.14);
 }
 
 .package-featured::before {
@@ -750,8 +785,8 @@ details:hover {
   top: 18px;
   right: 18px;
   padding: 7px 10px;
-  color: #451a03;
-  background: #fde68a;
+  color: #052e16;
+  background: #bbf7d0;
   border-radius: 999px;
   font-size: 12px;
   font-weight: 950;
@@ -760,7 +795,7 @@ details:hover {
 
 .price {
   margin-bottom: 0;
-  font-size: 30px;
+  font-size: clamp(36px, 4.6vw, 52px);
   font-weight: 950;
   line-height: 1.05;
 }
@@ -770,12 +805,20 @@ ul {
   padding-left: 20px;
 }
 
-.package ul {
-  flex: 1;
-}
-
 .package li + li {
   margin-top: 7px;
+}
+
+.package-section {
+  display: grid;
+  gap: 8px;
+}
+
+.package-section > span {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 950;
+  text-transform: uppercase;
 }
 
 .package-note,
@@ -794,9 +837,16 @@ ul {
 }
 
 .price-detail {
-  padding-top: 12px;
-  border-top: 1px solid rgba(148, 163, 184, 0.22);
+  padding: 12px;
+  background: #f8fafc;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: var(--radius);
   font-size: 14px;
+}
+
+.package .button {
+  width: 100%;
+  margin-top: auto;
 }
 
 .offer-note {
@@ -807,28 +857,26 @@ ul {
 
 .camera-strip {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .camera-card {
   display: grid;
-  min-height: 210px;
+  min-height: 230px;
   align-content: space-between;
-  gap: 18px;
-  padding: 22px;
+  gap: 20px;
+  padding: 26px;
   color: #2f343b;
-  background:
-    radial-gradient(circle at 86% 16%, rgba(245, 158, 11, 0.24) 0 4px, transparent 5px) 0 0 / 20px 20px,
-    linear-gradient(135deg, #ffffff 0%, #f4f7fb 52%, #e2e8f0 100%);
-  border: 1px solid rgba(148, 163, 184, 0.26);
+  background: #ffffff;
+  border: 1px solid rgba(148, 163, 184, 0.22);
   border-radius: var(--radius);
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.08);
 }
 
 .camera-card strong {
   color: var(--dark);
-  font-size: clamp(29px, 4vw, 44px);
+  font-size: clamp(30px, 4vw, 46px);
   font-weight: 950;
   line-height: 0.95;
   text-transform: uppercase;
@@ -837,6 +885,15 @@ ul {
 .camera-card span {
   color: var(--muted);
   font-weight: 750;
+}
+
+.camera-card::before {
+  width: 48px;
+  height: 48px;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: var(--radius);
+  content: "";
 }
 
 .calculator-section {
@@ -1054,6 +1111,33 @@ legend {
   gap: 10px;
 }
 
+.maintenance-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(24px, 4vw, 54px);
+  align-items: start;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(26px, 4vw, 48px);
+  background: #ffffff;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: var(--radius);
+  box-shadow: 0 22px 58px rgba(15, 23, 42, 0.1);
+}
+
+.maintenance-card p {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.maintenance-card .button {
+  margin-top: 12px;
+}
+
+.maintenance-list {
+  margin: 0;
+}
+
 .case-card {
   overflow: hidden;
 }
@@ -1117,11 +1201,9 @@ legend {
   gap: 16px;
   align-content: start;
   padding: 26px;
-  color: var(--white);
-  background:
-    radial-gradient(circle at 78% 0%, rgba(245, 158, 11, 0.22), transparent 34%),
-    linear-gradient(145deg, #0f172a, #111827);
-  border: 1px solid rgba(148, 163, 184, 0.22);
+  color: var(--text);
+  background: #ffffff;
+  border: 1px solid rgba(34, 197, 94, 0.24);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -1132,7 +1214,7 @@ legend {
 }
 
 .review-summary p {
-  color: #cbd5e1;
+  color: var(--muted);
 }
 
 .review-cards {
@@ -1222,15 +1304,11 @@ details p {
 
 .final-cta {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 430px);
-  gap: 30px;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 480px);
+  gap: clamp(26px, 5vw, 64px);
   align-items: start;
-  color: var(--white);
-  background:
-    radial-gradient(circle at 18% 0%, rgba(245, 158, 11, 0.23), transparent 32%),
-    radial-gradient(circle at 88% 12%, rgba(34, 197, 94, 0.16), transparent 28%),
-    linear-gradient(145deg, #070b13, var(--dark-2)),
-    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 14px);
+  color: var(--text);
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
 }
 
 .final-cta h2 {
@@ -1239,7 +1317,7 @@ details p {
 
 .final-copy p {
   max-width: 720px;
-  color: #cbd5e1;
+  color: var(--muted);
   font-size: 18px;
 }
 
@@ -1252,8 +1330,11 @@ details p {
 .lead-form {
   display: grid;
   gap: 14px;
-  padding: 24px;
+  padding: clamp(22px, 3vw, 30px);
   color: var(--text);
+  background: #ffffff;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.1);
 }
 
 .lead-form h3 {
@@ -1264,6 +1345,43 @@ details p {
   display: grid;
   gap: 7px;
   font-weight: 850;
+}
+
+.contact-section {
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.contact-info {
+  display: grid;
+  gap: 16px;
+}
+
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.contact-list a,
+.contact-list > span {
+  display: grid;
+  gap: 4px;
+  min-height: 82px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  font-weight: 850;
+}
+
+.contact-list span span,
+.contact-list a span {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 950;
+  text-transform: uppercase;
 }
 
 textarea {
@@ -1314,7 +1432,9 @@ textarea {
   .split,
   .final-cta,
   .services-layout,
-  .reviews-layout {
+  .reviews-layout,
+  .maintenance-card,
+  .quick-card-horizontal {
     grid-template-columns: 1fr;
   }
 
@@ -1326,7 +1446,8 @@ textarea {
   .grid-4,
   .steps,
   .camera-strip,
-  .trust-strip {
+  .trust-strip,
+  .contact-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1446,7 +1567,8 @@ textarea {
   .hero-actions .button,
   .calculator .button,
   .result-card .button,
-  .lead-form .button {
+  .lead-form .button,
+  .quick-card-horizontal .button {
     width: 100%;
   }
 
@@ -1468,12 +1590,35 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .quick-estimate {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .quick-card-horizontal {
+    padding: 22px;
+  }
+
+  .hero-services {
+    display: flex;
+    width: 100%;
+  }
+
+  .hero-form-card {
+    padding: 20px;
+  }
+
   .trust-strip {
     padding: 0 18px;
   }
 
-  .case-facts {
+  .case-facts,
+  .contact-list {
     grid-template-columns: 1fr;
+  }
+
+  .maintenance-card {
+    padding: 22px;
   }
 
   .package-badge {
